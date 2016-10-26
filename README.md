@@ -11,7 +11,7 @@ If you want to use a loop in your worker, please use other idea.
 
 ## Preparation
 
-before you build this tool, you have to make the DSLink SDK C.
+before you build it, you have to make the DSLink SDK C.
 See README.md for detail.
 
 Briefly, you just clone the SDK, and type ./tools/build.sh.

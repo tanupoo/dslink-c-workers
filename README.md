@@ -1,6 +1,14 @@
 Sample code to integrate a heavy work thread into the DSLink loop.
 ==================================================================
 
+This sample code tries to integrate some heavy workers
+into the main loop of DSLink.
+This code calls a worker by uv_queue_work()
+each time specified in the main loop.
+With the constraint of uv_work_t, the worker must return each time.
+So, please note that it can not handle the worker having own loop.
+If you want to use a loop in your worker, please use other idea.
+
 ## Preparation
 
 before you build this tool, you have to make the DSLink SDK C.

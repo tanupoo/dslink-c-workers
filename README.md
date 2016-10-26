@@ -16,6 +16,23 @@ Briefly, you just clone the SDK, and type ./tools/build.sh.
 
 To get the source code of this tool, you just clone it like below.
 
-    % git clone http://github.com/tanupoo/dslink-sample/c-heavy-work-threads.git
-    % cd dslink-sample-c-heavy-work-threads
+    % git clone http://github.com/tanupoo/dslink-c-workers.git
+    % cd dslink-c-workers
+
+You also have to set the full path to the DSLink SDK directory
+into DSLINK_SDK_DIR.
+
+    e.g.
+    % export DSLINK_SDK_DIR=/opt/dsa/sdk-dslink-c
+
+Then, make it.
+
+    % make
+
+## how to run
+
+don't forget to set LD_LIBRARY_PATH like below.
+
+    e.g.
+    % export LD_LIBRARY_PATH=$DSLINK_SDK_DIR/build
 

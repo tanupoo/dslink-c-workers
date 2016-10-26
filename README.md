@@ -1,5 +1,5 @@
-Sample code to integrate a heavy work thread into the DSLink loop.
-==================================================================
+A heavy work thread into the DSLink loop
+========================================
 
 This sample code tries to integrate some heavy workers
 into the main loop of DSLink.

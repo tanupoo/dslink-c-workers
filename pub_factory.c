@@ -84,8 +84,6 @@ do_heavy_work_for30s(uv_work_t *work)
 	char *buf = malloc(buf_size);
 	snprintf(buf, buf_size, "%d", counter++);
 	wc->string_value = buf;
-	printf("%s", wc->node_name);
-	fflush(stdout);
 
 	if (f_debug) {
 		printf("%s", wc->node_name);

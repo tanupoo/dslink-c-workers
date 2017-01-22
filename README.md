@@ -2,7 +2,7 @@ A heavy work thread into the DSLink loop
 ========================================
 
 This sample code shows how to integrate a heavy worker,
-which has to handle a blocking I/O for example, into the DSLink.
+which has to handle a long work or a blocking I/O for example, into the DSLink.
 This code periodically calls a worker by uv_queue_work().
 With the constraint of uv_work_t, the worker must return each time.
 That means that uv_work_t can not handle the worker having own loop.

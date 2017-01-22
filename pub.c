@@ -29,7 +29,7 @@ usage()
 "                        e.g. http://dsa-broker.example.com/conn\n"
 "    -D,--dslink=string  set the dslink name of this. (default:%s)\n"
 "    -l,--log=level      set the log level.  (info,none,..., default:%s)\n"
-"    -d,--debug          no verbosity.\n"
+"    -d,--debug          increase verbosity.\n"
 "    -h,--help           show this help menu.\n"
 	, my_name, log_level);
 

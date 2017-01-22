@@ -27,7 +27,7 @@ PUB_OBJS= pub.o pub_factory.o
 #     LDLIBS+= -lpthread
 #     endif
 #
-CC = clang
+CC ?= clang
 CPPFLAGS += -I${DSLINK_SDK_DIR}/sdk/include
 CPPFLAGS += -I${DSLINK_SDK_DIR}/deps/libuv/include
 CPPFLAGS += -I${DSLINK_SDK_DIR}/deps/jansson/include

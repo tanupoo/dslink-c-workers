@@ -2,6 +2,10 @@ ifndef DSLINK_SDK_DIR
 $(error DSLINK_SDK_DIR must be defined.)
 endif
 
+ifndef OS
+OS = $(shell uname -s)
+endif
+
 #
 # you should define TARGETS in your Makefile so that useful target
 # in this file works properly.
@@ -15,25 +19,19 @@ TARGETS=pub
 
 PUB_OBJS= pub.o pub_factory.o
 
-#     RMFILES
-#
-# you must include this Makefile.common immediately after definition
-# of above variables.
-#
-# Your Makefile shoud have the following line if you want
-# to define the OS specific parameters.
-#
-#     ifeq ($(OS),Linux)
-#     LDLIBS+= -lpthread
-#     endif
-#
-CC ?= clang
+ifeq ($(OS),Darwin)
+CC = clang
+endif
 CPPFLAGS += -I${DSLINK_SDK_DIR}/sdk/include
 CPPFLAGS += -I${DSLINK_SDK_DIR}/deps/libuv/include
 CPPFLAGS += -I${DSLINK_SDK_DIR}/deps/jansson/include
 CPPFLAGS += -I${DSLINK_SDK_DIR}/deps/mbed/include
+CPPFLAGS += -I${DSLINK_SDK_DIR}/build/include
 LDFLAGS += -L${DSLINK_SDK_DIR}/build
 LDFLAGS += -fsanitize=address
+ifeq ($(OS),Linux)
+LDLIBS += -pthread
+endif
 LDLIBS += -llibuv -ljansson -lsdk_dslink_c
 
 .PHONY: clean _dirs_

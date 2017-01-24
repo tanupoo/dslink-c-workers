@@ -43,3 +43,6 @@ don't forget to set LD_LIBRARY_PATH like below.
     e.g.
     % export LD_LIBRARY_PATH=$DSLINK_SDK_DIR/build
 
+The URL of the broker is only required like below:
+
+    % ./pub -B https://127.0.0.1:8100/conn
